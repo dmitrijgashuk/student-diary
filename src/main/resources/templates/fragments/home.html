@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Diary</title>
+    <style>
+        html, body {
+            height: 100%;          /* на всю висоту вікна */
+            margin: 0;             /* прибираємо відступи браузера */
+        }
+
+        #unique {
+            display: flex;
+            flex-direction: column; /* розташування блоків вертикально */
+            min-height: 100vh;      /* висота контейнера = вся висота екрану */
+        }
+
+        .header {
+            background-color: grey;
+            padding: 20px;
+            border: 2px solid #000;
+            margin: 0;              /* прибрав margin, щоб не "ламав" макет */
+        }
+
+        .footer {
+            background-color: olive;
+            padding: 20px;
+            border: 2px solid #000;
+            margin: 0;
+        }
+
+        .in_the_middle {
+            display: flex;
+            flex: 1;                /* займати весь доступний простір */
+            padding: 15px;
+            box-sizing: border-box; /* щоб padding не збільшував висоту */
+        }
+
+        .left-side,
+        .main-content,
+        .right-side {
+            flex: 1;
+            padding: 5px;
+            border: 2px solid #000;
+            margin: 5px;
+        }
+
+        .left-side {
+            background-color: yellow;
+        }
+
+        .main-content {
+            background-color: lime;
+        }
+
+        .right-side {
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+<div id="unique">
+    <div class="header">Header</div>
+    <div class="in_the_middle">
+        <div class="left-side">Left-menu</div>
+        <div class="main-content">Main content</div>
+        <div class="right-side">Right-menu</div>
+    </div>
+    <div class="footer">Footer</div>
+</div>
+</body>
+</html>
